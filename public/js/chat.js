@@ -90,6 +90,7 @@ $("#message-form").on("submit", function(e) {
 		text: $("[name=message]").val()
 	}, function(){
 		console.log("Got it !!!");
+    $("[name=message]").val('');
 	});
 })
 

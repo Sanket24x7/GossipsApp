@@ -118,12 +118,44 @@ button:disabled {
   flex-direction: column;
   height: 100vh;
   width: 100%;
+  background-image: url(../images/ios-bgimage.png);
+  background-position: 1% 72%;
+  background-size: cover;
 }
 
 .chat__messages {
   flex-grow: 1;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
+}
+
+.message-wrapper {
+    max-width: 350px;
+    display: inline-block;
+    padding: 5px 15px;
+    position: relative;
+}
+
+.message-background {
+    background-image: url('../images/iphone-bg.png');
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    filter: blur(1px);
+    background-color: rgba(201, 204, 208, 0.73);
+    border-radius: 5px;
+    z-index: 0;
+}
+
+.message-content {
+    position: relative;
+    width: 100%;
+    display: block;
 }
 
 .chat__footer {
@@ -166,10 +198,11 @@ button:disabled {
 .message__title h4 {
   font-weight: 600;
   margin-right: 10px;
+  color: #e47b7b;
 }
 
 .message__title span {
-  color: #999;
+  color: #9c9292;
 }
 
 @media (max-width: 600px) {

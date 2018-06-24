@@ -26,12 +26,17 @@
 
   	<script id="message-template" type="text/template">
   		<li class="message">
-  			<div class="message__title">
-  				<h4>{{from}}</h4>
-  				<span>{{on}}</span>
-  			</div>
-  			<div class="message__body">
-				<p>{{text}}</p>
+  			<div class="message-wrapper">
+  				<div class="message-background"></div>
+  				<div class="message-content">
+		  			<div class="message__title">
+		  				<h4>{{from}}</h4>
+		  				<span>{{on}}</span>
+		  			</div>
+		  			<div class="message__body">
+						<p>{{text}}</p>
+		  			</div>
+	  			</div>
   			</div>
   		</li>
   	</script>

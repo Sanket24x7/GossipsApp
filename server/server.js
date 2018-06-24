@@ -43,13 +43,15 @@ io.on("connection", (socket) => {
 	   callback();
 	});
 
-	socket.on("createMessage", (message) => {
+	socket.on("createMessage", (message, callback) => {
 	 console.log("New Daak", message);
      var user = users.getUser(socket.id);
 
      if (user && isRealString(message.text)) {
        io.to(user.room).emit("newMessage", generateMessage(user.name, message.text));
      }
+
+     callback();
 
 	 // socket.broadcast.emit("newMessage", {
 	 // 	from: message.from,
