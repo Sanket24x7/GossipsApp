@@ -84,7 +84,8 @@ button:disabled {
 }
 
 .chat__sidebar {
-  overflow-y: scroll;
+  position: relative;
+  overflow-y: auto;
   width: 260px;
   height: 100vh;
   background: -moz-linear-gradient(125deg, rgba(39,107,130,1) 0%, rgba(49,84,129,1) 100%); /* ff3.6+ */
@@ -95,10 +96,21 @@ button:disabled {
   background: linear-gradient(325deg, rgba(39,107,130,1) 0%, rgba(49,84,129,1) 100%); /* w3c */
 }
 
+.chat__sidebar:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/ios-bgimage.png);
+    background-position: 1% 70%;
+    filter: blur(20px);
+}
+
 .chat__sidebar h3 {
   color: #e6eaee;
   margin: 10px 20px;
   text-align: left;
+  position: relative;
 }
 
 .chat__sidebar ul {
@@ -111,6 +123,10 @@ button:disabled {
   border-radius: 5px;
   padding: 10px;
   margin: 10px;
+}
+
+#users {
+  position: relative;
 }
 
 .chat__main {
@@ -152,6 +168,20 @@ button:disabled {
     z-index: 0;
 }
 
+.message-background:before {
+   content: ‘’;
+   width: 300px;
+   height: 400px;
+   background: inherit; 
+   position: absolute;
+   left: -25px;  //giving minus -25px left position
+   right: 0;
+   top: -25px;   //giving minus -25px top position 
+   bottom: 0;
+   box-shadow: inset 0 0 0 200px rgba(255,255,255,0.3);
+   filter: blur(10px);
+}
+
 .message-content {
     position: relative;
     width: 100%;
@@ -164,6 +194,15 @@ button:disabled {
   padding: 10px;
   /*height: 60px;*/
   flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.chat__footer:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 .chat__footer form {

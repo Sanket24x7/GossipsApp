@@ -20,7 +20,7 @@
         <input name="message" type="text" placeholder="Message" autofocus autocomplete="off"/>
         <button>Send</button>
       </form>
-      <button id="send-location">Send location</button>
+      <button id="send-location" disabled>Send location</button>
     </div>
   </div>
 
@@ -28,13 +28,15 @@
   		<li class="message">
   			<div class="message-wrapper">
   				<div class="message-background"></div>
-  				<div class="message-content">
-		  			<div class="message__title">
-		  				<h4>{{from}}</h4>
-		  				<span>{{on}}</span>
-		  			</div>
-		  			<div class="message__body">
-						<p>{{text}}</p>
+  				<div class="color">
+	  				<div class="message-content">
+			  			<div class="message__title">
+			  				<h4>{{from}}</h4>
+			  				<span>{{on}}</span>
+			  			</div>
+			  			<div class="message__body">
+							<p>{{text}}</p>
+			  			</div>
 		  			</div>
 	  			</div>
   			</div>
