@@ -85,7 +85,7 @@ button:disabled {
 
 .chat__sidebar {
   position: relative;
-  overflow-y: auto;
+  overflow-x: hidden;
   width: 260px;
   height: 100vh;
   background: -moz-linear-gradient(125deg, rgba(39,107,130,1) 0%, rgba(49,84,129,1) 100%); /* ff3.6+ */
@@ -99,7 +99,7 @@ button:disabled {
 .chat__sidebar:before {
     content: '';
     position: absolute;
-    width: 100%;
+    width: 120%;
     height: 100%;
     background-image: url(../images/ios-bgimage.png);
     background-position: 1% 70%;
@@ -189,20 +189,14 @@ button:disabled {
 }
 
 .chat__footer {
-  background: #e6eaee;
+  /*background: #e6eaee;*/
+  background-color: transparent; 
   display: flex;
   padding: 10px;
   /*height: 60px;*/
   flex-shrink: 0;
   position: relative;
   overflow: hidden;
-}
-
-.chat__footer:before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
 }
 
 .chat__footer form {
